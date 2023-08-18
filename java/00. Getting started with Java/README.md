@@ -52,30 +52,21 @@
     - 운영체제마다 메모리를 관리하는 방식이 다름
 - 자바 프로그램은 자바 가상 머신(JVM, Java Virtual Machine)을 통해 플랫폼에 관계없이 실행할 수 있음 ⇒ 플랫폼 독립적
 
-### 01-5. Java Architecture
-
-| 고급언어(자바) | .java |
-| --- | --- |
-| 컴파일러 | javac |
-| 클래스 파일(기계어) | .class |
-| JVM(Java Virtual Machine) | java |
-| 운영체제(플랫폼) | Window, Linux, Mac |
-
 
 ## 02. JDK 설치와 환경 설정
 ### 02-1. 자바 에디션
 
 - 자바는 개발 분야에 따라 다양한 에디션으로 개발 도구를 제공
-    | 자바 SE | 자바의 핵심 기능, 표준 자바 플랫폼 |
+    | 종류 | 개발 분야 |
     | --- | --- |
+    | 자바 SE | 자바의 핵심 기능, 표준 자바 플랫폼 |
     | 자바 EE | 분산 환경, 서버용 자바 플랫폼 |
     | 자바 ME | 자원이 제한된 임베디드 시스템용 플랫폼 |
 
 - 자바 에디션은 JRE와 JDK를 포함
-    | JDK(Java Development Kit) - 자바 개발 키트 | 컴파일러, 디버거, 애플릿 뷰어 등 |
-    | --- | --- |
-    | JRE(Java Runtime Environment) - 자바 실행 환경 | 클래스 로더, 자바 API, 실행 시간 라이브러리 등 |
-    | JVM | JIT 컴파일러, 자바 인터프리터 등 |
+    - JDK(Java Development Kit) - 컴파일러, 디버거, 애플릿 뷰어 등 
+    - JRE(Java Runtime Environment) - 클래스 로더, 자바 API, 실행 시간 라이브러리 등
+    - JVM - JIT 컴파일러, 자바 인터프리터 등
 
 ### 02-2. JDK 설치
 
