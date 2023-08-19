@@ -30,7 +30,7 @@ Ex) "듣다(Listen)" 를 정의할 때
 - 사람의 일반적인 사고방식은 `매우 포괄적`이며 실생활에서 경험하는 익숙한 사항에 대해 `당연시하는 안이한 인식`이 있다.
 - 따라서 `컴퓨터의 관점`에서 문제를 사고(Computational Thinking)해야 한다.
 - 논리적, 수학적 사고도 필요하다.
-- 해결 과제를 `작은 단위로 분해` 하고 `패턴화해서 추출`하며 , 프로그래밍 내에서 사용될 모든 개념은 `평가 가능하도록 정의` 해야 한다.
+- 해결 과제를 `작은 단위로 분해`하고 `패턴화해서 추출`하며 , 프로그래밍 내에서 사용될 모든 개념은 `평가 가능하도록 정의`해야 한다.
 
 <br />
 
@@ -73,7 +73,7 @@ console.log(number * number); // NaN
 
 <br />
 
-> 💡 결국, 프로그래밍은 `요구사항의 집합을 분석`해서 `적절한 자료구조와 함수의 집합으로 변환한 후`, 그 `흐름을 제어하는 것`이다.
+> 💡 결국, 프로그래밍은 `요구사항의 집합을 분석`해서 `적절한 자료구조와 함수의 집합으로 변환한 후`, 그 `흐름을 제어하는 것`
 
 <br />
 <br />
@@ -107,8 +107,8 @@ console.log(number * number); // NaN
 
 ## 자바스크립트 성장의 역사
 
-
 ### 초기 자바스크립트
+
 - 웹페이지의 `보조적인 기능`을 수행하기 위해 한정적인 용도로 사용
 - 대부분 로직은 `웹 서버`에서 실행
 - 브라우저는 서버로부터 전달받은 HTML & CSS를 `단순히 렌더링`하는 수준
@@ -145,8 +145,8 @@ console.log(number * number); // NaN
 - CPU 사용률이 높은 애플리케이션에는 권장하지 않음
 - Node.js의 등장으로 자바스크립트는 브라우저를 벗어나 `서버 사이드 애플리케이션 개발에도 사용할 수 있는 범용 프로그래밍 언어`가 되었다.
 
-
 ### SPA 프레임워크
+
 - 모던 웹 애플리케이션은 데스크톱 애플리케이션과 비교해도 손색없는 성능과 사용자 경험을 제공하는 것이 필수가 되었고, 더불어 `개발 규모와 복잡도`도 상승했다.
 - 이전의 개발 방식으로는 복잡해진 개발 과정을 수행하기 어려워져 `CBD(Component based development) 방법론`을 기반으로 하는 `SPA(Single Page Application)`가 대중화되면서 Angular, React, Vue.js, Svelte 등 다양한 프레임워크/라이브러리가 많은 사용층을 확보하고 있다.
 
@@ -161,24 +161,29 @@ console.log(number * number); // NaN
 ## 자바스크립트와 ECMAScript
 
 ### ECMAScript
+
 - 자바스크립트 표준사양인 ECMA-262를 말함
 - 프로그래밍 언어의 값, 타입, 객체와 프로퍼티, 함수, 표준 빌트인 객체 등 핵심 문법을 규정한 것
 
 ### 자바스크립트 
+
 - 프로그래밍 언어
 - ECMAScript와 브라우저가 별도 지원하는 클라이언트 사이드 Web API(DOM, BOM, Canvas, XMLHttpRequest, fetch, requestAnimationFrame, SVG, Web Storage, Web Component, Web Worker 등)를 아우르는 개념
 
 ## 자바스크립트의 특징
 
 ### 인터프리터 언어
+
 - 개발자가 별도의 컴파일 작업을 수행하지 않음
 - 모던 자바스크립트 엔진(크롬 V8, 파이어폭스 SpiderMonkey, 사파리 JavaScriptCore, 마이크로소프트 엣지 Chakra 등)은 인터프리터와 컴파일러의 장점을 결합해 비교적 속도가 느린 인터프리터의 단점 해결
  - 전통적인 컴파일러 언어처럼 명시적인 컴파일 단계를 거치지는 않지만 일부 소스코드를 컴파일하고 실행
 
 ### 멀티 패러다임 프로그래밍 언어
+
 - 자바스크립트는 명령형(Imperative), 함수형(Functional), 프로토타입 기반(Prototype-based) 객체지향 프로그래밍을 지원
 
 ### 프로토타입 기반의 객체지향 언어
+
 - 자바스크립트는 클래스 기반 객체지향 언어보다 효율적이면서 강력
 
 <br />
@@ -188,16 +193,20 @@ console.log(number * number); // NaN
 
 ![브라우저와 Node.js환경에서 자바스크립트 용도는 다르다.](https://blog.kakaocdn.net/dn/UZwB6/btrcOONqhNg/sHeVMd4VMk7uzyf6UlXBuk/img.png)
 
+
+> 💡 브라우저와 Node.js가 공통적인 ECMAScript를 실행할 수 있지만 ECMAScript 이외에 추가로 제공하는 기능은 호환되지 않는다.
+
 ### 브라우저
+
 - HTML, CSS, JS를 실행해 `웹페이지를 브라우저 화면에 렌더링`하는 것이 주 목적
 - ECMAScript와 DOM, BOM, Canvas, XMLHttpRequest, fetch, requestAnimation Frame, SVG, Web Storage, Web Component, Web Worker와 같은 `클라이언트 사이드 API` 지원
+
 ### Node.js
+
 - `브라우저 외부`에서 자바스크립트 `실행 환경을 제공`하는 것이 주 목적
 - Node.js → ECMAScript와 `Node.js 고유의 API 지원`
 
 <br />
-
-> 💡 브라우저와 Node.js가 공통적인 ECMAScript를 실행할 수 있지만 ECMAScript 이외에 추가로 제공하는 기능은 호환되지 않는다.
 
 예를 들어,
 - 브라우저 → `DOM API를 제공`
