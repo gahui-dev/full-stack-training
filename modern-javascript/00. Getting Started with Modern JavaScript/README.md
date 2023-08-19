@@ -160,25 +160,26 @@ console.log(number * number); // NaN
 
 ## 자바스크립트와 ECMAScript
 
-```
-💡 ECMAScript
+### ECMAScript
 - 자바스크립트 표준사양인 ECMA-262를 말함
 - 프로그래밍 언어의 값, 타입, 객체와 프로퍼티, 함수, 표준 빌트인 객체 등 핵심 문법을 규정한 것
-```
 
-```
-💡 자바스크립트 
+### 자바스크립트 
 - 프로그래밍 언어
 - ECMAScript와 브라우저가 별도 지원하는 클라이언트 사이드 Web API(DOM, BOM, Canvas, XMLHttpRequest, fetch, requestAnimationFrame, SVG, Web Storage, Web Component, Web Worker 등)를 아우르는 개념
-```
 
 ## 자바스크립트의 특징
 
-- 개발자가 별도의 컴파일 작업을 수행하지 않는 `인터프리터 언어`
-  - 모던 자바스크립트 엔진(크롬 V8, 파이어폭스 SpiderMonkey, 사파리 JavaScriptCore, 마이크로소프트 엣지 Chakra 등)은 인터프리터와 컴파일러의 장점을 결합해 비교적 속도가 느린 인터프리터의 단점 해결
-  - 전통적인 컴파일러 언어처럼 명시적인 컴파일 단계를 커치지는 않지만 일부 소스코드를 컴파일하고 실행
-- 자바스크립트는 명령형(Imperative), 함수형(Functional), 프로토타입 기반(Prototype-based) 객체지향 프로그래밍을 지원하는 `멀티 패러다임 프로그래밍 언어`
-- 자바스크립트는 클래스 기반 객체지향 언어보다 효율적이면서 강력한 `프로토타입 기반의 객체지향 언어`
+### 인터프리터 언어
+- 개발자가 별도의 컴파일 작업을 수행하지 않음
+- 모던 자바스크립트 엔진(크롬 V8, 파이어폭스 SpiderMonkey, 사파리 JavaScriptCore, 마이크로소프트 엣지 Chakra 등)은 인터프리터와 컴파일러의 장점을 결합해 비교적 속도가 느린 인터프리터의 단점 해결
+ - 전통적인 컴파일러 언어처럼 명시적인 컴파일 단계를 거치지는 않지만 일부 소스코드를 컴파일하고 실행
+
+### 멀티 패러다임 프로그래밍 언어
+- 자바스크립트는 명령형(Imperative), 함수형(Functional), 프로토타입 기반(Prototype-based) 객체지향 프로그래밍을 지원
+
+### 프로토타입 기반의 객체지향 언어
+- 자바스크립트는 클래스 기반 객체지향 언어보다 효율적이면서 강력
 
 <br />
 <br />
@@ -186,18 +187,15 @@ console.log(number * number); // NaN
 ## 자바스크립트 실행 환경(브라우저 vs Node.js)
 
 ![브라우저와 Node.js환경에서 자바스크립트 용도는 다르다.](https://blog.kakaocdn.net/dn/UZwB6/btrcOONqhNg/sHeVMd4VMk7uzyf6UlXBuk/img.png)
-```
-- 브라우저와 Node.js 둘 다 자바스크립트 엔진을 내장하고 있음
-- 브라우저와 Node.js는 용도가 다름
-```
 
-- 브라우저
-  - HTML, CSS, JS를 실행해 `웹페이지를 브라우저 화면에 렌더링`하는 것이 주 목적
-  - ECMAScript와 DOM, BOM, Canvas, XMLHttpRequest, fetch, requestAnimation Frame, SVG, Web Storage, Web Component, Web Worker와 같은 `클라이언트 사이드 API` 지원
-- Node.js
-  - `브라우저 외부`에서 자바스크립트 `실행 환경을 제공`하는 것이 주 목적
-  - Node.js → ECMAScript와 `Node.js 고유의 API 지원`
+### 브라우저
+- HTML, CSS, JS를 실행해 `웹페이지를 브라우저 화면에 렌더링`하는 것이 주 목적
+- ECMAScript와 DOM, BOM, Canvas, XMLHttpRequest, fetch, requestAnimation Frame, SVG, Web Storage, Web Component, Web Worker와 같은 `클라이언트 사이드 API` 지원
+### Node.js
+- `브라우저 외부`에서 자바스크립트 `실행 환경을 제공`하는 것이 주 목적
+- Node.js → ECMAScript와 `Node.js 고유의 API 지원`
 
+<br />
 > 💡 브라우저와 Node.js가 공통적인 ECMAScript를 실행할 수 있지만 ECMAScript 이외에 추가로 제공하는 기능은 호환되지 않는다.
 
 예를 들어,
