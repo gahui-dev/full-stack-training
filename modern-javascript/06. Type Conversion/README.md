@@ -198,8 +198,8 @@ Boolean({});            // true
 Boolean([]);            // true
 
 // 2. ! 부정 논리 연산자를 두번 사용하는 방법
-!!'x';                 // true
-!!'';                  // false
+!!'x';                  // true
+!!'';                   // false
 !!0;                    // false
 !!Infinity;             // true
 !!null;                 // false
@@ -216,9 +216,9 @@ Boolean([]);            // true
 
 ### 논리 연산자를 사용한 단축 평가
 
-- `논리곱(&&) 연산자`는 두 개의 피연산자가 모두 true로 평가될 때 true 반환
+- `논리곱(&&) 연산자`는 두 개의 피연산자가 `모두 true`로 평가될 때 true 반환
 - 논리 연산의 결과를 결정하는 `두 번째 피연산자` 반환
-- `논리합(||) 연산자`는 두 개의 피연산자 중 하나만 true로 평가되어도 true 반환
+- `논리합(||) 연산자`는 두 개의 피연산자 중 `하나만 true`로 평가되어도 true 반환
 - 논리 연산의 결과를 결정한 `첫 번째 피연산자` 반환
 
 | 단축 평가 표현식 | 평가 결과 |
@@ -282,7 +282,7 @@ function getStringLength(str = '') {
 getStringLength(); // 0
 ```
 
-### 옵셔널 체이닝`(?.)` 연산자
+### 옵셔널 체이닝 연산자`(?.)`
 
 > 💡 객체를 가리키기를 기대하는 변수가 `null` 또는 `undefine가` 아닌지 `확인`하고 `프로퍼티를 참조`할 때 유용
 
@@ -294,13 +294,39 @@ var elem = null;
 var value = elem?.value;
 ```
 
-- 옵셔널 체이닝 도입 이전에는 논리 연산자(&&)를 사용한 단축 평가를 통해 null 또는 undefined인지 확인
+- `옵셔널 체이닝 연산자(?.)` 도입 이전에는 `논리 연산자(&&)`를 사용한 단축 평가를 통해 `null 또는 undefined인지 확인`
 ```javascript
 var elem = null;
 var value = elem && elem.value; // null
 ```
 
+```javascript
+var str = '';
+// 피연산자가 Falsy 값이라도 null 또는 undefined가 아니면 우항의 프로퍼티를 참조
+var length = str?.length;
+console.log(length); // 0
+```
 
-### null 병합`(??)` 연산자
+### null 병합 연산자`(??)`
 
-> 💡 객체를 가리키기를 기대하는 변수가 `null` 또는 `undefine가` 아닌지 `확인`하고 `프로퍼티를 참조`할 때 유용
+> 💡 변수에 기본값을 설정할 때 유용
+
+- 좌항의 피연산자가 `null 또는 undefined`인 경우 `우항의 피연산자를 반환`
+- 그렇지 않으면 `좌항의 피연산자 반환`
+
+```javascript
+var foo = null ?? 'default string';
+console.log(foo) // "default string"
+```
+
+- `null 병합 연산자(??)` 도입 이전에는 `논리 연산자(||)`를 사용한 단축 평가를 통해 `변수에 기본값 저장`
+
+```javascript
+// Falsy 값인 0이나 ''도 기본값으로서 유효하다면 예기치 않은 동작 발생 가능
+var foo = '' || 'default string';
+console.log(foo); // "default string"
+
+// 좌항의 피연산자가 Falsy 값이라도 null 또는 undefined가 아니면 좌항의 피연산자 반환
+var foo = '' ?? 'default string';
+console.log(foo); // ""
+```
