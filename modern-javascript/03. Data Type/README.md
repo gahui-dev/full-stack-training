@@ -6,14 +6,14 @@
 
 ### 원시타입
 
-| 데이터 타입 | 설명 |
-| ------- | ------------------------------------------------- |
-| 숫자(number) 타입 | 숫자. 정수와 실수 구분 없이 하나의 숫자 타입만 존재 |
-| 문자열(string) 타입 | 문자열 |
-| 불리언(boolean) 타입 | 논리적 참(true)과 거짓(false) |
-| undefined 타입 | var 키워드로 선언된 변수에 암묵적으로 할당되는 값 |
-| null 타입 | 갑싱 없다는 것을 의도적으로 명시할 때 사용하는 값 |
-| 심벌(symbol) 타입 | ES6에서 추가된 7번째 타입 |
+| 데이터 타입          | 설명                                                |
+| -------------------- | --------------------------------------------------- |
+| 숫자(number) 타입    | 숫자. 정수와 실수 구분 없이 하나의 숫자 타입만 존재 |
+| 문자열(string) 타입  | 문자열                                              |
+| 불리언(boolean) 타입 | 논리적 참(true)과 거짓(false)                       |
+| undefined 타입       | var 키워드로 선언된 변수에 암묵적으로 할당되는 값   |
+| null 타입            | 값이 없다는 것을 의도적으로 명시할 때 사용하는 값   |
+| 심벌(symbol) 타입    | ES6에서 추가된 7번째 타입                           |
 
 ### 객체 타입
 
@@ -27,33 +27,33 @@
 
 ```javascript
 // 모두 숫자 타입
-var integer = 10;    // 정수
-var double = 10.12;  // 실수
-var negative = -20;  // 음의 정수
+var integer = 10; // 정수
+var double = 10.12; // 실수
+var negative = -20; // 음의 정수
 ```
 
 > 💡 자바스크립트는 2진수, 8진수, 16진수를 표현하기 위한 데이터 타입을 제공하지 않기 때문에 모두 `10진수`로 해석
 
 ```javascript
 var binary = 0b01000001; // 2진수
-var octal = 0o101;       // 8진수
-var hex = 0x41;          // 16진수
+var octal = 0o101; // 8진수
+var hex = 0x41; // 16진수
 
 // 표기법만 다를 뿐 모두 같은 값
-console.log(binary);  //65
-console.log(octal);   //65
-console.log(hex);     //65
+console.log(binary); //65
+console.log(octal); //65
+console.log(hex); //65
 console.log(binary === octal); // true
-console.log(octal === hex);    // true
+console.log(octal === hex); // true
 ```
 
 > 💡 정수로 표시된다 해도 사실은 실수
 
 ```javascript
 // 숫자 타입은 모두 실수로 처리됨
-console.log(1 === 1.0);  //true
-console.log(4 / 2);      // 2
-console.log(3 / 2);      // 1.5
+console.log(1 === 1.0); //true
+console.log(4 / 2); // 2
+console.log(3 / 2); // 1.5
 ```
 
 > 💡 숫자 타입은 추가적으로 세 가지 특별한 값을 표현할 수 있음
@@ -64,8 +64,8 @@ console.log(3 / 2);      // 1.5
 
 ```javascript
 // 숫자 타입의 세 가지 특별한 값
-console.log(1 / 0);       // Infinity
-console.log(10 / -0);      // -Infinity
+console.log(1 / 0); // Infinity
+console.log(10 / -0); // -Infinity
 console.log(1 * 'string'); // NaN
 ```
 
@@ -75,7 +75,7 @@ console.log(1 * 'string'); // NaN
 
 > 💡 `텍스트` 데이터를 나타내는데 사용, 0개 이상의 `16비트 유니코드 문자(UTF-16)의 집합`으로 전 세계 대부분의 문자 표현
 
-- `작은따옴표(''), 큰따옴표(""), 백틱(``)`으로 텍스트를 감쌈
+- ` 작은따옴표(''), 큰따옴표(""), 백틱(``) `으로 텍스트를 감쌈
 - 자바스크립트의 문자열은 `원시 타입`이며 `변경 불가능한 값`
   - C는 문자의 배열로 문자열을 표현하고, 자바는 문자열을 객체로 표현
   - 문자열이 생성되면 그 문자열을 변경할 수 없다는 것을 의미
@@ -83,9 +83,9 @@ console.log(1 * 'string'); // NaN
 ```javascript
 // 문자열 타입
 var string;
-string = '문자열';  // 작은따옴표
-string = "문자열";  // 큰따옴표
-string = `문자열`;  // 백틱(ES6)
+string = '문자열'; // 작은따옴표
+string = '문자열'; // 큰따옴표
+string = `문자열`; // 백틱(ES6)
 string = '작은 따옴표로 감싼 문자열 내의 "큰따옴표"는 문자열로 인식된다.';
 string = "큰따옴표로 감싼 문자열 내의 '작은따옴표'는 문자열로 인식된다.";
 ```
@@ -94,7 +94,7 @@ string = "큰따옴표로 감싼 문자열 내의 '작은따옴표'는 문자열
 
 > 💡 `멀티라인 문자열`, `표현식 삽입`, `태그드 템플릿` 등 편리한 문자열 처리 기능 제공
 
-- `백틱(``)`을 사용해 표현
+- ` 백틱(``) `을 사용해 표현
 - 템플릿 리터럴은 런타임에 일반 문자열로 변환되어 처리
 
 ### 멀티라인 문자열
@@ -108,8 +108,10 @@ var template = `<ul>
 
 // 결과
 <ul>
-  <li><a href="#">Home</a></li>
-</ul>
+  <li>
+    <a href='#'>Home</a>
+  </li>
+</ul>;
 ```
 
 ### 표현식 삽입
@@ -120,8 +122,8 @@ var template = `<ul>
 - 이때 평가 결과가 문자열이 아니더라도 `문자열`로 타입이 `강제 변환`되어 삽입
 
 ```javascript
-var first = "Ga-hee";
-var last = "Lee";
+var first = 'Ga-hee';
+var last = 'Lee';
 
 // ES6: 표현식 삽입
 console.log(`My name is ${first} ${last}.`); // My name is Ga-hee Lee.
@@ -176,8 +178,8 @@ foo = null;
 <html>
   <body>
     <script>
-        // HTML 문서에 myClass 클래스를 갖는 요소가 없다면 null 반환
-      var element = document.querySelector(".myObj");
+      // HTML 문서에 myClass 클래스를 갖는 요소가 없다면 null 반환
+      var element = document.querySelector('.myObj');
       console.log(element); // null
     </script>
   </body>
