@@ -57,7 +57,7 @@ console.log(decrease());  // -2
 
 - arguments, caller, length, name, prototype 프로퍼티는 모두 함수 객체의 데이터 프로퍼티
 - `__proto__`는 `접근자 프로퍼티`이며, 함수 객체 고유의 프로퍼티가 아니라 `Object.prototype 객체의 프로퍼티`를 상속받은 것
--- Object.prototype 객체의 `__proto__ 접근자 프로퍼티`는 `모든 객체가 사용`할 수 있음
+- Object.prototype 객체의 `__proto__ 접근자 프로퍼티`는 `모든 객체가 사용`할 수 있음
 
 ```javascript
 function square(number) {
@@ -102,7 +102,8 @@ console.log(multiply(1, 2));     // 2
 console.log(multiply(1, 2, 3));  // 2
 ```
 
-- 선언된 매개변수의 개수와 함수를 호출할 때 전달하는 인수의 개수를 확인하지 않는 자바스크립트의 특성 때문에 함수가 호출되면 `인수 개수를 확인하고 이에 따라 함수의 동작을 달리 정의할 필요`가 있을 때 유용하게 사용
+- 선언된 매개변수의 개수와 함수를 호출할 때 전달하는 인수의 개수를 확인하지 않는 자바스크립트 특성
+- 함수가 호출되면 `인수 개수를 확인하고 이에 따라 함수의 동작을 달리 정의할 필요`가 있을 때 유용하게 사용
   - 매개변수 개수를 확정할 수 없는 `가변 인자 함수`를 구현할 때 유용
 
 ```javascript
