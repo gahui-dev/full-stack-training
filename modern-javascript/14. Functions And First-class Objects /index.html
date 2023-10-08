@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function square(number) {
+      return number * number;
+    }
+
+    console.dir(square);
+    console.log(Object.getOwnPropertyDescriptors(square));
+    console.log(Object.getOwnPropertyDescriptor(square, '__proto__'));
+    console.log(Object.getOwnPropertyDescriptor(Object.prototype, '__proto__'));
+
+    function multiply(x, y) {
+      console.log(arguments);
+      return x * y;
+    }
+
+    console.log(multiply());
+    console.log(multiply(1));        // NaN
+    console.log(multiply(1, 2));     // 2 
+    console.log(multiply(1, 2, 3));  // 2
+
+    function foo(func) {
+      return func();
+    }
+
+    function bar() {
+      return 'caller : ' + bar.caller;
+    }
+
+    // 브라우저에서 실행 결과
+    console.log(foo(bar));
+    console.log(bar());
+  </script>
+</body>
+
+</html>
