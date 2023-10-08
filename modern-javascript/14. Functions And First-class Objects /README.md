@@ -4,7 +4,7 @@
 
 > 💡 다음 조건을 만족하는 객체를 `일급 객체`라 함
 
-1. 무명의 리터럴로 생성할 수 있다. 즉, 런타임에 생성이 가능
+1. 무명의 리터럴로 생성할 수 있다. 즉, 런타임에 생성이 가능
 2. 변수나 자료구조(객체, 배열)등에 저장할 수 있음
 3. 함수의 매개변수에 전달할 수 있음 
 4. 함수의 반환값으로 사용할 수 있음
@@ -164,5 +164,59 @@ function baz(x, y) {
 console.log(baz.length);  // 2
 ```
 
+### name 프로퍼티
+
+> 💡 함수 이름을 나타냄
+
+- ES5와 ES6에서 동작을 달리함
+- 익명 함수 표현식의 경우, `ES5`에서는 name 프로퍼티는 `빈 문자열을 값`으로 가짐
+- 익명 함수 표현식의 경우, `ES6`에서는 함수 객체를 가리키는 `식별자를 값`으로 가짐
+
+```javascript
+// 기명 함수 표현식
+var namedFunc = function foo() {};
+console.log(namedFunc.name); // foo
+
+// 익명 함수 표현식 
+var anonymousFunc = function() {};
+// ES5: 빈 문자열을 값으로 가짐
+// ES6: 함수 객체를 가리키는 변수 이름을 값으로 가짐
+console.log(anonymousFunc.name); // anonymousFunc
+
+// 함수 선언문
+function bar() {}
+console.log(bar.name);  // bar
+```
+
 ### __proto__ 접근자 프로퍼티
+
+> 💡 `[[Prototype]]` 내부 슬롯이 가리키는 `프로토타입 객체에 접근`하기 위해 사용하는 `접근자 프로퍼티`
+
+- `모든 객체`는 `[[Prototype]]` 내부 슬롯을 가지며` 객체지향 프로그래밍의 상속을 구현하는 프로토타입 객체`를 가리킴
+- 내부 슬롯에는 직접 접근할 수 없고 간접적인 접근 방법을 제공하는 경우에 한해 접근 가능
+
+```javascript
+const obj = { a : 1 };
+
+// 객체 리터럴 방식으로 생성한 객체의 프로토타입 객체는 Object.prototype
+console.log(obj.__proto__ === Object.prototype);  // true
+
+// 객체 리터럴 방식으로 생성한 객체는 프로토타입 객체인 Object.prototype의 프로퍼티를 상속 받음
+console.log(obj.hasOwnProperty('a'));         // true
+console.log(obj.hasOwnProperty('__proto__'))  // false
+```
+
 ### prototype 프로퍼티
+
+> 💡 생성자 함수로 호출할 수 있는 객체, 즉 `constructor 소유하는 프로퍼티`
+
+- portotype 프로퍼티는 함수가 객체를 생성하는 `생성자 함수로 호출될 때` 생성자 함수가 생성할 `인스턴스의 프로토타입 객체`를 가리킴
+- 일반 객체와 생성자 함수로 호출할 수 없는 non-constructor prototype 프로퍼티가 없음
+
+```javascript
+// 함수 객체는 prototype 프로퍼티를 소유
+(function () {}).hasOwnProperty('prototype'); // true
+
+// 일반 객체는 prototype 프로퍼티를 소유하지 않음
+({}).hawOwnProperty('prototype');             // false
+```

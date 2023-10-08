@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>함수와 일급 객체</title>
 </head>
 
 <body>
@@ -39,6 +39,20 @@
     // 브라우저에서 실행 결과
     console.log(foo(bar));
     console.log(bar());
+
+    var anonymousFunc = function () { };
+    console.log(anonymousFunc.name);
+
+    const obj = { a: 1 };
+
+    // 객체 리터럴 방식으로 생성한 객체의 프로토타입 객체는 Object.prototype
+    console.log(obj.__proto__ === Object.prototype);  // true
+    console.log(Object.getOwnPropertyDescriptors(obj));
+
+
+    // 객체 리터럴 방식으로 생성한 객체는 프로토타입 객체인 Object.prototype의 프로퍼티를 상속 받음
+    console.log(obj.hasOwnProperty('a'));         // true
+    console.log(obj.hasOwnProperty('__proto__'))  // falseƒ
   </script>
 </body>
 
